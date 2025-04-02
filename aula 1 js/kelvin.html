@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .temp {
+            margin: 10px 0;
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <p>Este programa converte Celsius para Fahrenheit e Kelvin</p>
+    
+    <div id="resultado">
+        As conversões aparecerão aqui...
+    </div>
+
+    <script>
+        // Solicitar temperatura em Celsius via prompt
+        const celsius = parseFloat(prompt("Digite a temperatura em Celsius:"));
+        
+        // Verificar se o valor é válido
+        if (isNaN(celsius)) {
+            document.getElementById("resultado").innerHTML = "Valor inválido. Por favor, recarregue a página e digite um número.";
+        } else {
+            // Calcular Fahrenheit
+            const fahrenheit = (celsius * 9/5) + 32;
+            
+            // Calcular Kelvin
+            const kelvin = celsius + 273.15;
+            
+            // Exibir resultados
+            document.getElementById("resultado").innerHTML = `
+                <div class="temp">Temperatura em Celsius: ${celsius.toFixed(2)}°C</div>
+                <div class="temp">Temperatura em Fahrenheit: ${fahrenheit.toFixed(2)}°F</div>
+                <div class="temp">Temperatura em Kelvin: ${kelvin.toFixed(2)}K</div>
+                <div class="temp">Fórmulas usadas:</div>
+                <div class="temp">°F = (°C × 9/5) + 32 = (${celsius.toFixed(2)} × 9/5) + 32 = ${fahrenheit.toFixed(2)}°F</div>
+                <div class="temp">K = °C + 273.15 = ${celsius.toFixed(2)} + 273.15 = ${kelvin.toFixed(2)}K</div>
+            `;
+        }
+    </script>
+</body>
+</html>

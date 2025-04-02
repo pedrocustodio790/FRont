@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Desconto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .seletor {
+            margin: 20px 0;
+        }
+        select, input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+        .preco-original {
+            text-decoration: line-through;
+            color: #777;
+        }
+        .preco-desconto {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .economia {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Desconto</h1>
+    
+    <div class="seletor">
+        <label for="produto">Selecione o produto:</label><br>
+        <select id="produto">
+            <option value="" disabled selected>Escolha um produto</option>
+            <option value="100">Produto 1 - R$ 100,00</option>
+            <option value="180">Produto 2 - R$ 180,00</option>
+            <option value="220">Produto 3 - R$ 220,00</option>
+        </select>
+    </div>
+    
+    <div class="seletor">
+        <label for="desconto">Selecione o desconto:</label><br>
+        <select id="desconto">
+            <option value="" disabled selected>Escolha um desconto</option>
+            <option value="10">10% de desconto</option>
+            <option value="15">15% de desconto</option>
+            <option value="25">25% de desconto</option>
+        </select>
+    </div>
+    
+    <button onclick="calcularDesconto()">Calcular Desconto</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function calcularDesconto() {
+            const produtoSelect = document.getElementById("produto");
+            const descontoSelect = document.getElementById("desconto");
+            const resultado = document.getElementById("resultado");
+            
+            const precoOriginal = parseFloat(produtoSelect.value);
+            const percentualDesconto = parseFloat(descontoSelect.value);
+            
+            // Verificar se ambos foram selecionados
+            if (isNaN(precoOriginal) || isNaN(percentualDesconto)) {
+                resultado.innerHTML = "Por favor, selecione um produto e um desconto antes de continuar.";
+                resultado.style.display = "block";
+                return;
+            }
+            
+            // Calcular desconto
+            const valorDesconto = precoOriginal * (percentualDesconto / 100);
+            const precoComDesconto = precoOriginal - valorDesconto;
+            
+            // Exibir resultado
+            resultado.innerHTML = `
+                <p>Produto selecionado: ${produtoSelect.options[produtoSelect.selectedIndex].text}</p>
+                <p>Desconto aplicado: ${percentualDesconto}%</p>
+                <p class="preco-original">Preço original: R$ ${precoOriginal.toFixed(2)}</p>
+                <p class="preco-desconto">Preço com desconto: R$ ${precoComDesconto.toFixed(2)}</p>
+                <p class="economia">Você economizou: R$ ${valorDesconto.toFixed(2)}</p>
+            `;
+            
+            resultado.style.display = "block";
+        }
+    </script>
+</body>
+</html>
