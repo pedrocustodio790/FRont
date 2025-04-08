@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       font-family: 'Arial', sans-serif;
+        background-color: #1a1a1a;
+        color: #fff;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: 
+          radial-gradient(circle at 25% 25%, #333 0%, #1a1a1a 50%, #000 100%);
+        min-height: 100vh;
+      }
+      
+      h1 {
+        color: #FF9933; /* Laranja Jack-O' */
+        text-align: center;
+        text-shadow: 0 0 8px rgba(255, 153, 51, 0.7);
+        margin-bottom: 30px;
+        font-size: 2em;
+        border-bottom: 3px dashed #FF9933;
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      
+      label {
+        display: block;
+        margin: 20px 0 10px;
+        color: #FFCC99;
+        font-size: 1.1em;
+      }
+      
+      input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 25px;
+        background-color: #2a2a2a;
+        border: 2px solid #FF9933;
+        color: white;
+        font-size: 1.1em;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+      
+      input[type="number"]:focus {
+        outline: none;
+        border-color: #FFCC00;
+        box-shadow: 0 0 10px rgba(255, 153, 51, 0.5);
+      }
+      
+      button {
+        background-color: #FF9933;
+        color: #1a1a1a;
+        border: none;
+        padding: 12px 20px;
+        margin: 0 10px 20px 0;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      
+      button:hover {
+        background-color: #FFCC00;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 153, 51, 0.7);
+      }
+      
+      button:active {
+        transform: scale(0.98);
+      }
+      
+      #resultado {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: #2a2a2a;
+        border: 2px dashed #fd0000;
+        color: #FFCC99;
+        font-size: 1.3em;
+        text-align: center;
+        border-radius: 8px;
+        min-height: 20px;
+      }
+      
+      /* Efeitos especiais temáticos */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #FF9933, #FFCC00, #FF9933);
+        z-index: 100;
+      }
+    </style>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <h1>can you hear the bells ding dong?</h1>
+    <label for="num1">Digite o primeiro número:</label>
+    <input type="number" id="num1" />
+    <button onclick="exponencial()">exponencial</button>
+    <button onclick="raiz()">raiz</button>
+    <p id="resultado"></p>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    background-color: #f8f9fa;
+    padding-bottom: 2rem;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1.5rem;
+}
+
+.table th {
+    background-color: #f1f1f1;
+    position: sticky;
+    top: 0;
+}
+
+.btn-action {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.15rem;
+    font-size: 0.875rem;
+}
+
+#valorTotalEstoque {
+    font-weight: bold;
+}
+
+/* Efeitos para tabela */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .btn-action {
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.table tbody tr {
+    animation: fadeIn 0.3s ease-out;
+}

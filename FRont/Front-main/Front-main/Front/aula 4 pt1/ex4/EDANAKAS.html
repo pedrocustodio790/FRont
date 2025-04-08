@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>invertido</title>
+    <style>
+ /* Resetando alguns estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para o body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* Estilos para o título */
+h1 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Estilos para o formulário e inputs */
+label {
+  font-size: 1rem;
+  color: #444;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Estilos para o campo de entrada */
+input[type="text"] {
+  font-size: 1rem;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+}
+
+/* Estilos para o botão */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para a saída do texto invertido */
+#saida {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+  font-family: monospace, monospace;
+  white-space: pre-wrap; /* Para preservar quebras de linha */
+  word-wrap: break-word;
+  transform: rotate(180deg); /* Inverte o texto */
+}
+
+    </style>
+    <script src="tpircs.js" defer></script>
+  </head>
+  <body>
+    <h1>
+      opı̣ʇɹǝʌuı̣ opunɯ oɐ ˙˙˙uǝzı̣ɐ opuı̣ʌ ɯǝq ˙˙˙ɐçǝqɐɔ ɐns ɐp oɹʇuǝp opnʇ ǝʇɹǝʌuı̣
+      oʇuɐnbuǝ ɹɐʇnן áɹǝpod ǝɔoʌ ǝs ɹɐʇunƃɹǝd ǝs ǝp ɐɹoɥ é soןnƃuɐ so sopoʇ ǝp
+      sopuı̣ʌ ǝnbɐʇɐ opuǝqǝɔǝɹ ǝ oãçǝɹı̣p ǝp sɐçuɐpnɯ sɐssǝ sɐpoʇ ɯoɔ ˙˙˙ɯéqɯɐʇ
+      noɔɐʇɐ êɔoʌ ǝpuo ǝp ǝ noɹı̣ʌ ǝs êɔoʌ ןɐnb ɐɹd oãçǝɹı̣p ɐ opı̣ʇɹǝʌuı̣ áʇsǝ opnʇ
+      sɐɹʇ ɐɹd ǝ ǝʇuǝɹɟ ɐɹd ɐʇı̣ǝɹı̣p ǝ ɐpɹǝnbsǝ oxı̣ɐq ɐɹd ɐ ɐɯı̣ɔ ɐɹd noʇou oɐu
+      ǝɔoʌ ǝnb ǝɔǝɹɐd ǝnb ɐı̣ɹı̣p nǝ ǝɯɐƃ oǝpı̣ʌ opɐƃoɾ̣ ɹǝʇ ǝʌǝp ɐɔunu ǝɔoʌ ?éu
+      opɐçɐɹƃuǝ 'é ˙˙˙ǝʌoɯ ǝs êɔoʌ ǝnb ɐɯɹoɟ ɐ opuɐpnɯ 'ɐçǝqɐɔ-ɐɹqǝnb oɯoɔ ǝƃɐ ǝ
+      ǝʇuǝuodo nǝs op oãçǝɹı̣p ǝp osuǝs o ǝʇɹǝʌuı̣ ɐןǝ ǝpɐuɐʞɐs ɐp ɹǝpod o
+      oʇuǝsǝɹdɐ ǝʇ nǝ
+    </h1>
+    <label for="textoinput">otxet mu etigiD</label>
+    <input type="text" id="textoinput" />
+    <button onclick="invertir(document.getElementById('textoinput').value,exibirtexto)">invertir</button>
+    <p id="saida"></p>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ex6.js" defer></script>
+    <title>Seleção de Disciplinas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selecione uma Disciplina</h1>
+    
+    <select id="disciplina">
+        <option value="">-- Selecione --</option>
+        <option value="Banco de Dados">Banco de Dados</option>
+        <option value="Front-End">Front-End</option>
+        <option value="Back-End">Back-End</option>
+    </select>
+    
+    <br>
+    
+    <button onclick="mostrarResultado()">Mostrar Resultado</button>
+    
+    <div id="resultado"></div>
+</body>
+</html>

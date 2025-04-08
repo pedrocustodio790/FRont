@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ex5.js" defer></script>
+    <title>Manipulação de Frases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f4f8;
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+        }
+        .resultado p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manipulação de Frases</h1>
+        
+        <label for="frase">Digite uma frase:</label>
+        <input type="text" id="frase" placeholder="Digite sua frase aqui...">
+        
+        <button onclick="processarFrase()">Processar Frase</button>
+        
+        <div id="resultado" class="resultado" style="display: none;">
+            <p><strong>Frase em maiúsculas:</strong> <span id="maiusculas"></span></p>
+            <p><strong>Frase em minúsculas:</strong> <span id="minusculas"></span></p>
+            <p><strong>Tamanho da frase:</strong> <span id="tamanho"></span> caracteres</p>
+        </div>
+    </div>
+</body>
+</html>
