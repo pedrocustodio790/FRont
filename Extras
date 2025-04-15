@@ -1,0 +1,115 @@
+// Pede os números ao usuário
+let num1 = parseInt(prompt("Digite o primeiro número:"));
+let num2 = parseInt(prompt("Digite o segundo número:"));
+
+// Valida se são diferentes
+while (num1 === num2) {
+    alert("Os números devem ser diferentes!");
+    num1 = parseInt(prompt("Digite o primeiro número novamente:"));
+    num2 = parseInt(prompt("Digite o segundo número novamente:"));
+}
+
+// Organiza qual é o menor e qual é o maior
+let menor = Math.min(num1, num2);
+let maior = Math.max(num1, num2);
+
+let multiplosDe5 = 0;
+
+// Conta os múltiplos de 5 no intervalo
+for (let i = menor; i <= maior; i++) {
+    if (i % 5 === 0) {
+        multiplosDe5++;
+    }
+}
+
+// Mostra o resultado
+alert(`Entre ${menor} e ${maior} há ${multiplosDe5} múltiplos de 5.`);
+ // Função principal usando arrow function
+const calcularCompra = () => {
+    // Pede o valor da compra
+    const valor = parseFloat(prompt("Digite o valor total da compra:"));
+    
+    // Pede a quantidade de parcelas (opcional)
+    const parcelas = parseInt(prompt("Quantas parcelas? (Digite 1 para à vista)"));
+    
+    // Calcula com juros se for parcelado
+    let total;
+    if (parcelas > 1) {
+        const juros = 0.02; // 2% ao mês
+        total = valor * Math.pow(1 + juros, parcelas);
+    } else {
+        // À vista tem 5% de desconto
+        total = valor * 0.95;
+    }
+    
+    // Formata o valor para moeda
+    const formatado = total.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+    // Operações básicas
+const somar = (a, b) => a + b;
+const subtrair = (a, b) => a - b;
+const multiplicar = (a, b) => a * b;
+const dividir = (a, b) => a / b;
+const potenciar = (a, b) => Math.pow(a, b);
+const raizQuadrada = a => Math.sqrt(a);
+
+// Função principal com callback
+function calcular(operacao, a, b) {
+  return operacao(a, b);
+}
+
+// Exemplo de uso:
+const num1 = parseFloat(prompt("Primeiro número:"));
+const num2 = parseFloat(prompt("Segundo número:"));
+const op = prompt("Operação (+, -, *, /, ^, √):");
+
+let resultado;
+switch(op) {
+  case '+': resultado = calcular(somar, num1, num2); break;
+  case '-': resultado = calcular(subtrair, num1, num2); break;
+  case '*': resultado = calcular(multiplicar, num1, num2); break;
+  case '/': resultado = calcular(dividir, num1, num2); break;
+  case '^': resultado = calcular(potenciar, num1, num2); break;
+  case '√': resultado = raizQuadrada(num1); break;
+  default: resultado = "Operação inválida";
+}
+
+alert(`Resultado: ${resultado}`);
+    // Mostra o resultado
+    alert(`Valor total a pagar: ${formatado}`);
+};
+
+// Chama a função para executar
+calcularCompra();
+f// Operações básicas
+const somar = (a, b) => a + b;
+const subtrair = (a, b) => a - b;
+const multiplicar = (a, b) => a * b;
+const dividir = (a, b) => a / b;
+const potenciar = (a, b) => Math.pow(a, b);
+const raizQuadrada = a => Math.sqrt(a);
+
+// Função principal com callback
+function calcular(operacao, a, b) {
+  return operacao(a, b);
+}
+
+// Exemplo de uso:
+const num1 = parseFloat(prompt("Primeiro número:"));
+const num2 = parseFloat(prompt("Segundo número:"));
+const op = prompt("Operação (+, -, *, /, ^, √):");
+
+let resultado;
+switch(op) {
+  case '+': resultado = calcular(somar, num1, num2); break;
+  case '-': resultado = calcular(subtrair, num1, num2); break;
+  case '*': resultado = calcular(multiplicar, num1, num2); break;
+  case '/': resultado = calcular(dividir, num1, num2); break;
+  case '^': resultado = calcular(potenciar, num1, num2); break;
+  case '√': resultado = raizQuadrada(num1); break;
+  default: resultado = "Operação inválida";
+}
+
+alert(`Resultado: ${resultado}`);
