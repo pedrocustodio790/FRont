@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Calculadora de Fatorial</title> <!-- Título da página -->
+  <script src="scrupt.js" defer></script> <!-- Inclui o arquivo JavaScript com carregamento assíncrono -->
+  <style>
+    /* Estilo do corpo da página */
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    /* Estilo para inputs e botões */
+    input, button { margin-top: 10px; padding: 10px; width: 100%; }
+    /* Estilo para o resultado */
+    #resultado { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Fatorial</h1> <!-- Cabeçalho principal -->
+
+  <label for="numero">Digite um número inteiro:</label> <!-- Rótulo para o campo de número -->
+  <input type="number" id="numero" min="0"> <!-- Campo de entrada para o número inteiro -->
+
+  <button onclick="calcular()">Calcular Fatorial</button> <!-- Botão que chama a função calcular() -->
+
+  <p id="resultado"></p> <!-- Parágrafo para exibir o resultado -->
+</body>
+</html>

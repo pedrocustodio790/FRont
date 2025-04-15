@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Verificar Par ou Ímpar</title> <!-- Título da página -->
+  <script src="script.js" defer></script> <!-- Inclui o arquivo JavaScript com carregamento assíncrono -->
+  <style>
+    body { 
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+    }
+    input, button { 
+      margin-top: 10px; /* Adiciona margem superior */
+      padding: 10px; /* Adiciona preenchimento interno */
+      width: 100%; /* Define a largura dos elementos como 100% */
+    }
+    #resultado { 
+      margin-top: 20px; /* Adiciona margem superior ao resultado */
+      font-weight: bold; /* Define o texto como negrito */
+    }
+  </style>
+</head>
+<body>
+  <h1>Verificar se o número é Par ou Ímpar</h1> <!-- Título principal da verificação -->
+
+  <label for="numero">Digite um número:</label> <!-- Rótulo para o campo de número -->
+  <input type="number" id="numero"> <!-- Campo de entrada para o número -->
+
+  <button onclick="verificar()">Verificar</button> <!-- Botão para verificar se o número é par ou ímpar -->
+
+  <p id="resultado"></p> <!-- Parágrafo para exibir o resultado -->
+</body>
+</html>

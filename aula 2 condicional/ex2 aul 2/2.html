@@ -1,0 +1,27 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Número do Mês</title> <!-- Título da página exibido na aba do navegador -->
+</head>
+<body>
+  <h2>Escolha um mês e veja o número correspondente</h2> <!-- Cabeçalho da seção -->
+  <select id="mesSelect"> <!-- Menu suspenso para seleção do mês -->
+    <option value="">--Escolha--</option> <!-- Opção padrão do menu -->
+    <option value="janeiro">Janeiro</option> <!-- Opção para o mês de janeiro -->
+    <option value="fevereiro">Fevereiro</option> <!-- Opção para o mês de fevereiro -->
+    <option value="março">Março</option> <!-- Opção para o mês de março -->
+    <option value="abril">Abril</option> <!-- Opção para o mês de abril -->
+    <option value="maio">Maio</option> <!-- Opção para o mês de maio -->
+    <option value="junho">Junho</option> <!-- Opção para o mês de junho -->
+    <option value="julho">Julho</option> <!-- Opção para o mês de julho -->
+    <option value="agosto">Agosto</option> <!-- Opção para o mês de agosto -->
+    <option value="setembro">Setembro</option> <!-- Opção para o mês de setembro -->
+    <option value="outubro">Outubro</option> <!-- Opção para o mês de outubro -->
+    <option value="novembro">Novembro</option> <!-- Opção para o mês de novembro -->
+    <option value="dezembro">Dezembro</option> <!-- Opção para o mês de dezembro -->
+  </select>
+  <button onclick="mostrarNumeroMes()">Mostrar</button> <!-- Botão que chama a função mostrarNumeroMes quando clicado -->
+  <p id="resultadoMes"></p> <!-- Parágrafo onde o resultado do mês será exibido -->
+</body>
+</html>

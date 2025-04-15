@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+    <title>Calculadora Básica</title> <!-- Título da página -->
+    <script src="script.js" defer ></script> <!-- Inclui o arquivo JavaScript com carregamento assíncrono -->
+</head>
+<body>
+    <h1>Calculadora Básica</h1> <!-- Cabeçalho principal da página -->
+    <input type="number" id="num1" placeholder="Primeiro número"> <!-- Campo de entrada para o primeiro número -->
+    <input type="number" id="num2" placeholder="Segundo número"> <!-- Campo de entrada para o segundo número -->
+    <select id="operacao"> <!-- Menu suspenso para selecionar a operação -->
+        <option value="adição">Adição</option> <!-- Opção de adição -->
+        <option value="subtração">Subtração</option> <!-- Opção de subtração -->
+        <option value="multiplicação">Multiplicação</option> <!-- Opção de multiplicação -->
+        <option value="divisão">Divisão</option> <!-- Opção de divisão -->
+    </select>
+    <button id="calcular">Calcular</button> <!-- Botão para executar o cálculo -->
+    <h2 id="resultado"></h2> <!-- Elemento para exibir o resultado -->
+</body>
+</html>

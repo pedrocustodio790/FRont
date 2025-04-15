@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Calculadora de Desconto</title> <!-- Título da página -->
+  <script src="script.js" defer></script> <!-- Inclui o arquivo JavaScript com carregamento assíncrono -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 30px; /* Adiciona espaçamento interno ao corpo */
+    }
+
+    input, button {
+      display: block; /* Exibe os elementos em bloco */
+      width: 100%; /* Define a largura dos elementos como 100% */
+      margin-top: 10px; /* Adiciona margem superior */
+      padding: 10px; /* Adiciona preenchimento interno */
+      font-size: 16px; /* Define o tamanho da fonte */
+    }
+
+    #resultado {
+      margin-top: 20px; /* Adiciona margem superior ao resultado */
+      font-weight: bold; /* Define o texto como negrito */
+      font-size: 18px; /* Define o tamanho da fonte do resultado */
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Desconto</h1> <!-- Título principal da calculadora -->
+
+  <label for="preco">Preço do Produto (R$):</label> <!-- Rótulo para o campo de preço -->
+  <input type="number" id="preco" placeholder="Ex: 100" step="0.01"> <!-- Campo de entrada para o preço -->
+
+  <label for="desconto">Desconto (% - opcional):</label> <!-- Rótulo para o campo de desconto -->
+  <input type="number" id="desconto" placeholder="Ex: 15"> <!-- Campo de entrada para o desconto -->
+
+  <button onclick="mostrarPrecoComDesconto()">Calcular Preço com Desconto</button> <!-- Botão para calcular o preço com desconto -->
+
+  <p id="resultado"></p> <!-- Parágrafo para exibir o resultado -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Gerenciador de Pedidos</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="pedido.js" defer></script> <!-- Inclui o script pedido.js, que será executado após o carregamento da página -->
+  <script src="script.js" defer></script> <!-- Inclui o script script.js, que será executado após o carregamento da página -->
+</head>
+<body>
+  <h1>Restaurante - Pedido</h1> <!-- Título principal da página -->
+
+  <h2>Adicionar Item</h2> <!-- Seção para adicionar um item ao pedido -->
+  <input type="text" id="nomeItem" placeholder="Nome do item"> <!-- Campo de entrada para o nome do item -->
+  <input type="number" id="quantidade" placeholder="Quantidade" min="1"> <!-- Campo de entrada para a quantidade do item, mínimo 1 -->
+  <input type="number" step="0.01" id="preco" placeholder="Preço (R$)" min="0.01"> <!-- Campo de entrada para o preço do item, mínimo 0.01 -->
+  <button onclick="adicionarItem()">Adicionar ao Pedido</button> <!-- Botão que chama a função adicionarItem() quando clicado -->
+
+  <h2>Resumo do Pedido</h2> <!-- Seção que exibe o resumo do pedido -->
+  <ul id="resumoPedido"></ul> <!-- Lista não ordenada que mostrará os itens do pedido -->
+  <p id="totalPedido">Total com 10%: R$ 0.00</p> <!-- Parágrafo que exibe o total do pedido com 10% de taxa -->
+
+  <button onclick="finalizarPedido()">Finalizar Pedido</button> <!-- Botão que chama a função finalizarPedido() quando clicado -->
+</body>
+</html>

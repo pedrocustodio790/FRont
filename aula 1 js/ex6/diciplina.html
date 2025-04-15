@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva -->
+    <script src="ex2.js" defer></script> <!-- Importa o script externo ex2.js com defer -->
+    <title>Área do Trapézio</title> <!-- Título da página -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte da página */
+            max-width: 500px; /* Define a largura máxima do conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            padding: 20px; /* Adiciona espaçamento interno */
+            text-align: center; /* Centraliza o texto */
+        }
+        .input-group {
+            margin: 15px 0; /* Adiciona espaçamento entre os grupos de entrada */
+        }
+        label {
+            display: inline-block; /* Exibe o rótulo como bloco inline */
+            width: 120px; /* Define a largura do rótulo */
+            text-align: right; /* Alinha o texto à direita */
+            margin-right: 10px; /* Adiciona espaçamento à direita do rótulo */
+        }
+        input {
+            padding: 8px; /* Adiciona espaçamento interno ao campo de entrada */
+            width: 100px; /* Define a largura do campo de entrada */
+            font-size: 16px; /* Define o tamanho da fonte */
+        }
+        button {
+            padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+            font-size: 16px; /* Define o tamanho da fonte do botão */
+            background-color: #4CAF50; /* Define a cor de fundo do botão */
+            color: white; /* Define a cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
+            cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+            margin-top: 10px; /* Adiciona espaçamento acima do botão */
+        }
+        button:hover {
+            background-color: #45a049; /* Altera a cor de fundo do botão ao passar o mouse */
+        }
+        #resultado {
+            margin-top: 20px; /* Adiciona espaçamento acima do resultado */
+            font-size: 18px; /* Define o tamanho da fonte do resultado */
+            font-weight: bold; /* Define o texto como negrito */
+            padding: 10px; /* Adiciona espaçamento interno ao resultado */
+            border: 1px solid #ddd; /* Adiciona uma borda ao resultado */
+            border-radius: 4px; /* Adiciona bordas arredondadas ao resultado */
+            background-color: #f9f9f9; /* Define a cor de fundo do resultado */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Área do Trapézio</h1> <!-- Cabeçalho principal da página -->
+    <p>Preencha os valores abaixo:</p> <!-- Instrução para o usuário -->
+    
+    <div class="input-group"> <!-- Grupo de entrada para a base maior -->
+        <label for="baseMaior">Base Maior (B):</label> <!-- Rótulo para a base maior -->
+        <input type="number" id="baseMaior" placeholder="B"> <!-- Campo de entrada para a base maior -->
+    </div>
+    
+    <div class="input-group"> <!-- Grupo de entrada para a base menor -->
+        <label for="baseMenor">Base Menor (b):</label> <!-- Rótulo para a base menor -->
+        <input type="number" id="baseMenor" placeholder="b"> <!-- Campo de entrada para a base menor -->
+    </div>
+    
+    <div class="input-group"> <!-- Grupo de entrada para a altura -->
+        <label for="altura">Altura (h):</label> <!-- Rótulo para a altura -->
+        <input type="number" id="altura" placeholder="h"> <!-- Campo de entrada para a altura -->
+    </div>
+    
+    <button onclick="calcularArea()">Calcular Área</button> <!-- Botão para calcular a área -->
+    
+    <div id="resultado"></div> <!-- Div para exibir o resultado -->
+</body>
+</html> 

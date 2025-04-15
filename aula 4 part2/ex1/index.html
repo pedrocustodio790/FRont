@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Saudação</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="script.js" defer></script> <!-- Inclui o arquivo JavaScript com carregamento deferido -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+    }
+    input, button {
+      margin-top: 10px; /* Adiciona margem superior aos elementos de entrada e botão */
+      padding: 10px; /* Adiciona preenchimento interno aos elementos de entrada e botão */
+      width: 100%; /* Define a largura dos elementos como 100% do contêiner pai */
+    }
+    #resultado {
+      margin-top: 20px; /* Adiciona margem superior ao elemento de resultado */
+      font-weight: bold; /* Define o texto como negrito */
+      font-size: 18px; /* Define o tamanho da fonte do resultado */
+    }
+  </style>
+</head>
+<body>
+  <h1>Saudação Personalizada</h1> <!-- Título principal da página -->
+
+  <label for="nome">Nome:</label> <!-- Rótulo para o campo de entrada do nome -->
+  <input type="text" id="nome" placeholder="Digite seu nome (ou deixe em branco)"> <!-- Campo de entrada para o nome -->
+
+  <label for="mensagem">Mensagem:</label> <!-- Rótulo para o campo de entrada da mensagem -->
+  <input type="text" id="mensagem" placeholder="Digite a mensagem (ou deixe em branco)"> <!-- Campo de entrada para a mensagem -->
+
+  <button onclick="executarSaudacao()">Exibir Saudação</button> <!-- Botão que chama a função executarSaudacao ao ser clicado -->
+
+  <p id="resultado"></p> <!-- Parágrafo onde a saudação será exibida -->
+</body>
+</html>
