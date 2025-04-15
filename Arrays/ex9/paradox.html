@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Cadastro de Alunos</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="parralax.js" defer ></script> <!-- Inclui o script JavaScript com carregamento assíncrono -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      max-width: 600px; /* Limita a largura máxima do conteúdo */
+      margin: 20px auto; /* Centraliza o conteúdo com margens automáticas */
+    }
+
+    input, button {
+      display: block; /* Exibe os elementos em bloco */
+      margin: 10px 0; /* Adiciona margens verticais entre os elementos */
+      padding: 10px; /* Adiciona preenchimento interno aos elementos */
+      width: 100%; /* Define a largura dos elementos como 100% do contêiner pai */
+    }
+
+    h2 {
+      margin-top: 30px; /* Adiciona margem superior ao título */
+      border-top: 1px solid #ccc; /* Adiciona uma borda superior ao título */
+      padding-top: 15px; /* Adiciona preenchimento superior ao título */
+    }
+
+    ul {
+      padding-left: 20px; /* Adiciona preenchimento à esquerda na lista */
+    }
+
+    .aprovado {
+      color: green; /* Define a cor do texto para alunos aprovados */
+    }
+
+    .reprovado {
+      color: red; /* Define a cor do texto para alunos reprovados */
+    }
+  </style>
+</head>
+<body>
+  <h1>We've got only one sky! Blue, red and black paranoia!</h1> <!-- Título principal da página -->
+
+  <label for="nome">Nome do Aluno:</label> <!-- Rótulo para o campo de entrada do nome -->
+  <input type="text" id="nome"> <!-- Campo de entrada para o nome do aluno -->
+
+  <label for="nota1">Nota 1:</label> <!-- Rótulo para o campo de entrada da primeira nota -->
+  <input type="number" id="nota1" min="0" max="10" step="0.1"> <!-- Campo de entrada para a primeira nota com restrições -->
+
+  <label for="nota2">Nota 2:</label> <!-- Rótulo para o campo de entrada da segunda nota -->
+  <input type="number" id="nota2" min="0" max="10" step="0.1"> <!-- Campo de entrada para a segunda nota com restrições -->
+
+  <label for="nota3">Nota 3:</label> <!-- Rótulo para o campo de entrada da terceira nota -->
+  <input type="number" id="nota3" min="0" max="10" step="0.1"> <!-- Campo de entrada para a terceira nota com restrições -->
+
+  <button onclick="cadastrarAluno()">Cadastrar Aluno</button> <!-- Botão para cadastrar o aluno, chamando a função JavaScript -->
+
+  <h2>✅ Alunos Aprovados (média ≥ 7)</h2> <!-- Título para a lista de alunos aprovados -->
+  <ul id="listaAprovados"></ul> <!-- Lista onde os alunos aprovados serão exibidos -->
+
+  <h2>❌ Alunos Reprovados (média < 7)</h2> <!-- Título para a lista de alunos reprovados -->
+  <ul id="listaReprovados"></ul> <!-- Lista onde os alunos reprovados serão exibidos -->
+</body>
+</html>

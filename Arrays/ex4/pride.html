@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Lista de Itens</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="faith.js" defer></script> <!-- Inclui o arquivo JavaScript 'faith.js' com carregamento deferido -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+    }
+
+    input[type="text"], button {
+      padding: 10px; /* Adiciona espaçamento interno aos campos de texto e botões */
+      margin: 10px 5px 10px 0; /* Define margens ao redor dos campos de texto e botões */
+    }
+
+    #lista {
+      margin-top: 20px; /* Adiciona margem superior ao elemento da lista */
+    }
+
+    .item {
+      margin: 5px 0; /* Define margens verticais para cada item da lista */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Gerenciador de Lista</h1> <!-- Título principal da página -->
+
+  <input type="text" id="novoItem" placeholder="Digite um item"> <!-- Campo de entrada para novo item -->
+  <button onclick="adicionarItem()">Adicionar</button> <!-- Botão para adicionar um item à lista -->
+  <button onclick="removerSelecionados()">Remover Selecionados</button> <!-- Botão para remover itens selecionados da lista -->
+
+  <div id="lista"></div> <!-- Div que conterá a lista de itens -->
+
+</body>
+</html>

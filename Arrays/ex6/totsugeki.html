@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Seleção de Frutas com Imagem</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="yamada.js" defer ></script> <!-- Inclui o arquivo JavaScript 'yamada.js' com carregamento assíncrono -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+      text-align: center; /* Centraliza o texto no corpo */
+    }
+
+    select {
+      padding: 10px; /* Adiciona espaçamento interno ao elemento select */
+      margin-bottom: 20px; /* Adiciona margem inferior ao elemento select */
+    }
+
+    #resultado {
+      font-weight: bold; /* Define o texto como negrito */
+      color: green; /* Define a cor do texto como verde */
+      margin-top: 10px; /* Adiciona margem superior ao parágrafo de resultado */
+    }
+
+    #imagemFruta {
+      max-width: 200px; /* Define a largura máxima da imagem */
+      margin-top: 20px; /* Adiciona margem superior à imagem */
+      display: none; /* Inicialmente oculta a imagem */
+    }
+  </style>
+</head>
+<body>
+
+  <h1> swallow, so that's me Non-stop love song I will follow you wherever you go I cant wait to catch up Before the Sun sleeps  Not if you're short of breath I'm the disaster of passion 
+    Eles roubaram essa letra 
+  </h1>
+
+  <select id="dropdownFrutas" onchange="mostrarFrutaSelecionada()"> <!-- Dropdown para seleção de frutas -->
+    <!-- Opções serão adicionadas dinamicamente --> <!-- Comentário indicando que as opções do select serão geradas via JavaScript -->
+  </select>
+
+  <p id="resultado"></p> <!-- Parágrafo para exibir o resultado da seleção -->
+  <img id="imagemFruta" src="" alt="Imagem da fruta"> <!-- Imagem que será exibida com base na seleção -->
+</body>
+</html>
