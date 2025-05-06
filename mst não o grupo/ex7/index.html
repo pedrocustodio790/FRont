@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Regressivo</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .countdown {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px;
+            display: none;
+        }
+        .countdown span {
+            display: inline-block;
+            min-width: 80px;
+            padding: 5px;
+        }
+        .countdown-label {
+            font-size: 14px;
+            display: block;
+            color: #bdc3c7;
+            margin-top: 5px;
+        }
+        .error {
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador Regressivo</h1>
+        
+        <div class="input-group">
+            <label for="dataFutura">Selecione uma data e hora futura:</label>
+            <input type="datetime-local" id="dataFutura">
+        </div>
+        
+        <button id="iniciarBtn">Iniciar Contagem Regressiva</button>
+        
+        <div class="error" id="mensagemErro"></div>
+        
+        <div class="countdown" id="contador">
+            <div>
+                <span id="dias">00</span>
+                <span class="countdown-label">Dias</span>
+            </div>
+            <div>
+                <span id="horas">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div>
+                <span id="minutos">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div>
+                <span id="segundos">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+</body>
+</html>

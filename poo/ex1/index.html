@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Cadastro de Aluno</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="aluno.js" defer></script> <!-- Inclui o script aluno.js, que será executado após o carregamento do HTML -->
+  <script src="main.js" defer></script> <!-- Inclui o script main.js, que será executado após o carregamento do HTML -->
+</head>
+<body>
+  <h1>Cadastro de Aluno</h1> <!-- Título principal da página -->
+  <form id="formAluno"> <!-- Início do formulário com o ID formAluno -->
+    <label for="nome">Nome:</label> <!-- Rótulo para o campo de entrada do nome -->
+    <input type="text" id="nome" required> <!-- Campo de entrada para o nome, obrigatório -->
+    <br><br> <!-- Quebra de linha para espaçamento -->
+
+    <label>Nota 1:</label> <!-- Rótulo para o campo de entrada da primeira nota -->
+    <input type="number" id="nota1" step="0.01" required> <!-- Campo de entrada para a primeira nota, obrigatório e com duas casas decimais -->
+    <br> <!-- Quebra de linha para espaçamento -->
+
+    <label>Nota 2:</label> <!-- Rótulo para o campo de entrada da segunda nota -->
+    <input type="number" id="nota2" step="0.01" required> <!-- Campo de entrada para a segunda nota, obrigatório e com duas casas decimais -->
+    <br> <!-- Quebra de linha para espaçamento -->
+
+    <label>Nota 3:</label> <!-- Rótulo para o campo de entrada da terceira nota -->
+    <input type="number" id="nota3" step="0.01" required> <!-- Campo de entrada para a terceira nota, obrigatório e com duas casas decimais -->
+    <br><br> <!-- Quebra de linha para espaçamento -->
+
+    <button type="submit">Calcular Média</button> <!-- Botão para enviar o formulário e calcular a média -->
+  </form>
+
+  <h2 id="resultado"></h2> <!-- Elemento para exibir o resultado da média calculada -->
+</body>
+</html>

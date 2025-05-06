@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Sistema de Controle de Tarefas</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="tarefa.js" defer></script> <!-- Inclui o script tarefa.js, que será carregado após o HTML -->
+  <script src="script.js" defer></script> <!-- Inclui o script script.js, que será carregado após o HTML -->
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; } /* Estilo do corpo da página */
+    input, textarea, button { margin: 5px; } /* Margem para inputs, textarea e botões */
+    button { cursor: pointer; } /* Muda o cursor para pointer ao passar sobre o botão */
+    li { margin-bottom: 10px; } /* Margem inferior para itens da lista */
+    .concluida { color: green; } /* Estilo para tarefas concluídas */
+    .pendente { color: red; } /* Estilo para tarefas pendentes */
+  </style>
+</head>
+<body>
+
+  <h1>Controle de Tarefas</h1> <!-- Título principal da página -->
+
+  <h2>Adicionar Nova Tarefa</h2> <!-- Seção para adicionar uma nova tarefa -->
+  <input type="text" id="titulo" placeholder="Título da Tarefa"> <!-- Campo de texto para o título da tarefa -->
+  <input type="date" id="data"> <!-- Campo de data para a data da tarefa -->
+  <textarea id="descricao" placeholder="Descrição da tarefa"></textarea> <!-- Campo de texto para a descrição da tarefa -->
+  <button onclick="adicionarTarefa()">Adicionar</button> <!-- Botão que chama a função adicionarTarefa ao ser clicado -->
+
+  <h2>Lista de Tarefas</h2> <!-- Seção que exibe a lista de tarefas -->
+  <ul id="listaTarefas"></ul> <!-- Lista não ordenada onde as tarefas serão exibidas -->
+
+</body>
+</html>

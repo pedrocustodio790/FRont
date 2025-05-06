@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+  <title>Simulação de Compra - E-commerce</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="Produto.js"></script> <!-- Importa o arquivo JavaScript que contém a lógica dos produtos -->
+  <script src="Carrinho.js"></script> <!-- Importa o arquivo JavaScript que contém a lógica do carrinho de compras -->
+  <script src="app.js" defer></script> <!-- Referência ao novo arquivo JS, carregado após o HTML -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px; 
+    }
+    .produto, .carrinho {
+      margin-bottom: 20px;}
+  </style>
+</head>
+<body>
+
+  <h1>Simulação de Compra</h1> <!-- Título principal da página -->
+
+  <div class="produto"> <!-- Divisão para os produtos disponíveis -->
+    <h2>Produtos disponíveis</h2> <!-- Subtítulo para a seção de produtos -->
+    <div>
+      <label for="produtoNome">Nome:</label> <!-- Rótulo para o campo de nome do produto -->
+      <input type="text" id="produtoNome" placeholder="Nome do Produto"><br> <!-- Campo de entrada para o nome do produto -->
+      <label for="produtoPreco">Preço:</label> <!-- Rótulo para o campo de preço do produto -->
+      <input type="number" id="produtoPreco" placeholder="Preço do Produto"><br> <!-- Campo de entrada para o preço do produto -->
+      <label for="produtoQuantidade">Quantidade:</label> <!-- Rótulo para o campo de quantidade do produto -->
+      <input type="number" id="produtoQuantidade" placeholder="Quantidade disponível"><br> <!-- Campo de entrada para a quantidade disponível -->
+      <button onclick="adicionarProduto()">Adicionar Produto</button> <!-- Botão para adicionar o produto ao carrinho -->
+    </div>
+  </div>
+
+  <div class="carrinho"> <!-- Divisão para o carrinho de compras -->
+    <h2>Carrinho de Compras</h2> <!-- Subtítulo para a seção do carrinho -->
+    <button onclick="finalizarCompra()">Finalizar Compra</button><br><br> <!-- Botão para finalizar a compra -->
+    <h3>Produtos no Carrinho</h3> <!-- Subtítulo para a lista de produtos no carrinho -->
+    <ul id="listaCarrinho"></ul> <!-- Lista onde os produtos adicionados ao carrinho serão exibidos -->
+
+    <h3>Total: <span id="totalCompra">R$ 0,00</span></h3> <!-- Exibe o total da compra -->
+
+    <label for="desconto">Aplicar Desconto (%):</label> <!-- Rótulo para o campo de desconto -->
+    <input type="number" id="desconto" placeholder="Desconto em %"> <!-- Campo de entrada para aplicar desconto -->
+     <!-- Define a fonte do corpo da página -->
+      <!-- Define a margem da página -->
+        <!-- Adiciona espaço entre os elementos de produto e carrinho -->
+    

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalizador de Frases</title>
+    <script src="scrpit.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        #inputArea, #outputArea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Capitalizador de Frases</h1>
+    <p>Digite uma frase abaixo e clique no botão para capitalizar cada palavra:</p>
+    
+    <textarea id="inputArea" rows="4" placeholder="Digite sua frase aqui..."></textarea>
+    <br>
+    <button onclick="capitalizarFrase()">Capitalizar Frase</button>
+    <br>
+    <textarea id="outputArea" rows="4" readonly placeholder="Resultado aparecerá aqui..."></textarea>
+</body>
+</html>

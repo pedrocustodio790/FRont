@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciador de Estoque</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .motivacional {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: white;
+    }
+    input, select, button {
+      padding: 8px;
+      margin: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #mensagem {
+      color: red;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+  <script src="produto.js" defer></script>
+  <script src="estoque.js" defer></script>
+</head>
+<body>
+  <!-- Imagem motivacional como cabeçalho -->
+  <img src="1745348267641.jpg" alt="Mensagem motivacional" class="motivacional">
+  
+  <h1>Gerenciador de Estoque</h1>
+  
+  <div id="mensagem"></div>
+
+  <section>
+    <h2>Cadastrar Produto</h2>
+    <input type="text" id="nome" placeholder="Nome" required>
+    <input type="number" id="quantidade" placeholder="Quantidade">
+    <input type="number" id="preco" placeholder="Preço Unitário">
+    <button id="btnCadastrar">Cadastrar</button>
+  </section>
+
+  <section>
+    <h2>Atualizar Estoque</h2>
+    <input type="text" id="nomeAtualizar" placeholder="Nome do Produto" >
+    <select id="operacao" >
+      <option value="">Selecione...</option>
+      <option value="adicionar">Adicionar</option>
+      <option value="remover">Remover</option>
+    </select>
+    <input type="number" id="quantidadeAtualizar" placeholder="Quantidade">
+    <button id="btnAtualizar">Atualizar</button>
+  </section>
+
+  <section>
+    <h2>Produtos no Estoque</h2>
+    <ul id="listaProdutos"></ul>
+  </section>
+</body>
+</html>

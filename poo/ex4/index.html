@@ -1,0 +1,32 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Estacionamento - Controle de Veículos</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="veiculo.js" defer></script> <!-- Inclui o script veiculo.js, que será carregado após o HTML -->
+  <script src="script.js" defer></script> <!-- Inclui o script script.js, que será carregado após o HTML -->
+  <style>
+    body { font-family: Arial; padding: 20px; } /* Define a fonte e o espaçamento do corpo da página */
+    input, button { margin: 5px; } /* Define a margem para inputs e botões */
+    li { margin-bottom: 10px; } /* Define a margem inferior para itens da lista */
+  </style>
+</head>
+<body>
+
+  <h1>Controle de Estacionamento</h1> <!-- Título principal da página -->
+
+  <h2>Registrar Veículo</h2> <!-- Seção para registrar um novo veículo -->
+  <input type="text" id="placa" placeholder="Placa (ex: ABC-1234)"> <!-- Campo para inserir a placa do veículo -->
+  <input type="text" id="modelo" placeholder="Modelo do veículo"> <!-- Campo para inserir o modelo do veículo -->
+  <input type="number" id="tempo" placeholder="Tempo (horas)" min="1"> <!-- Campo para inserir o tempo de estacionamento em horas -->
+  <button onclick="registrarVeiculo()">Registrar</button> <!-- Botão que chama a função registrarVeiculo ao ser clicado -->
+
+  <h2>Buscar por Placa</h2> <!-- Seção para buscar veículos registrados por placa -->
+  <input type="text" id="filtroPlaca" placeholder="Digite a placa"> <!-- Campo para inserir a placa a ser filtrada -->
+  <button onclick="filtrarPorPlaca()">Filtrar</button> <!-- Botão que chama a função filtrarPorPlaca ao ser clicado -->
+
+  <h2>Veículos Registrados</h2> <!-- Seção que lista os veículos registrados -->
+  <ul id="listaVeiculos"></ul> <!-- Lista não ordenada onde os veículos registrados serão exibidos -->
+
+</body>
+</html>

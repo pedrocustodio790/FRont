@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Seleção de Frutas</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="volcanic.js" defer> </script> <!-- Inclui o arquivo JavaScript 'volcanic.js' com carregamento assíncrono -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+    }
+
+    select {
+      padding: 10px; /* Adiciona espaçamento interno ao elemento select */
+      margin-bottom: 20px; /* Adiciona margem inferior ao elemento select */
+    }
+
+    #resultado {
+      font-weight: bold; /* Define o texto como negrito */
+      color: green; /* Define a cor do texto como verde */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Don't melt in the world Find your one ways</h1> <!-- Título principal da página -->
+
+  <select id="dropdownFrutas" onchange="mostrarFrutaSelecionada()"> <!-- Dropdown para seleção de frutas -->
+    <!-- Opções serão preenchidas via JavaScript --> <!-- Comentário indicando que as opções do dropdown serão geradas dinamicamente -->
+  </select>
+
+  <p id="resultado"></p> <!-- Parágrafo para exibir o resultado da seleção -->
+</body>
+</html>

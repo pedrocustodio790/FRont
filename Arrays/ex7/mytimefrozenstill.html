@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Gerenciador de Produtos</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="mytimemovesagain.js" defer ></script> <!-- Inclui o script JavaScript com carregamento assíncrono -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+    }
+
+    input, select, button {
+      padding: 10px; /* Adiciona espaçamento interno aos elementos de entrada, seleção e botão */
+      margin: 5px 0; /* Adiciona margem vertical entre os elementos */
+      width: 100%; /* Define a largura dos elementos como 100% do contêiner pai */
+    }
+
+    .produto {
+      border: 1px solid #ccc; /* Define uma borda cinza clara ao redor do produto */
+      padding: 10px; /* Adiciona espaçamento interno ao contêiner do produto */
+      margin-top: 10px; /* Adiciona margem superior ao contêiner do produto */
+      border-radius: 5px; /* Arredonda os cantos da borda do produto */
+    }
+
+    h2 {
+      margin-top: 30px; /* Adiciona margem superior aos cabeçalhos h2 */
+    }
+  </style>
+</head>
+<body>
+  <h1>Not much, no prob' Even if the world doesn't change</h1> <!-- Título principal da página -->
+
+  <label>Nome:</label>
+  <input type="text" id="nomeProduto"> <!-- Campo de entrada para o nome do produto -->
+
+  <label>Preço:</label>
+  <input type="number" id="precoProduto" step="0.01"> <!-- Campo de entrada para o preço do produto, permitindo casas decimais -->
+
+  <label>Categoria:</label>
+  <input type="text" id="categoriaProduto"> <!-- Campo de entrada para a categoria do produto -->
+
+  <button onclick="adicionarProduto()">Cadastrar Produto</button> <!-- Botão para cadastrar um novo produto -->
+
+  <h2>Filtrar Produtos</h2>
+
+  <label>Filtrar por Nome:</label>
+  <input type="text" id="filtroNome"> <!-- Campo de entrada para filtrar produtos pelo nome -->
+
+  <label>Filtrar por Categoria:</label>
+  <input type="text" id="filtroCategoria"> <!-- Campo de entrada para filtrar produtos pela categoria -->
+
+  <button onclick="filtrarProdutos()">Aplicar Filtros</button> <!-- Botão para aplicar os filtros de pesquisa -->
+  <button onclick="removerFiltrados()">Remover Produtos Filtrados</button> <!-- Botão para remover produtos que foram filtrados -->
+
+  <h2>Lista de Produtos</h2>
+  <div id="listaProdutos"></div> <!-- Div que exibirá a lista de produtos cadastrados -->
+
+  <h2>Produtos Filtrados</h2>
+  <div id="produtosFiltrados"></div> <!-- Div que exibirá os produtos que foram filtrados -->
+</body>
+</html>

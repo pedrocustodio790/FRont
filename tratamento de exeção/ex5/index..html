@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Alunos</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .header {
+      width: 100%;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+
+    .form-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-section {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      background-color: #2d2d2d;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    input {
+      margin: 10px 0;
+      padding: 12px;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #3d3d3d;
+      border: 1px solid #4d4d4d;
+      color: #ffffff;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input::placeholder {
+      color: #b0b0b0;
+    }
+
+    button {
+      padding: 12px;
+      width: 100%;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    li {
+      margin: 10px 0;
+      padding: 15px;
+      background-color: #2d2d2d;
+      border-radius: 6px;
+      list-style-type: none;
+    }
+
+    .motivational-image {
+      max-width: 100%;
+      height: auto;
+      max-height: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .student-list {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .image-section {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Cadastro de Alunos</h1>
+    </div>
+
+    <div class="form-section">
+      <form id="formAluno">
+        <input type="text" id="nome" placeholder="Nome" required />
+        <input type="number" id="idade" placeholder="Idade" required />
+        <input type="text" id="matricula" placeholder="Matrícula" required />
+        <input type="number" id="nota" placeholder="Nota (0 a 10)" required />
+        <button type="submit">Adicionar Aluno</button>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <img src="1745945197466.jpg" alt="Mensagem motivacional: Pare de achar que ninguém gosta de você. Comece a ter certeza." class="motivational-image">
+    </div>
+
+    <div class="student-list">
+      <h2>Lista de Alunos</h2>
+      <ul id="listaAlunos"></ul>
+    </div>
+  </div>
+</body>
+</html>

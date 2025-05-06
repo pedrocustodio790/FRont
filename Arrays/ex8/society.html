@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Cadastro de Filmes</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="discord.js" defer ></script> <!-- Importa o script discord.js de forma assíncrona -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      margin: 20px; /* Define a margem externa do corpo */
+      max-width: 600px; /* Define a largura máxima do corpo */
+    }
+    input, select, button {
+      display: block; /* Exibe os elementos em bloco */
+      margin: 10px 0; /* Define a margem vertical entre os elementos */
+      padding: 10px; /* Define o preenchimento interno dos elementos */
+      width: 100%; /* Define a largura dos elementos como 100% do contêiner pai */
+    }
+    .filtro {
+      margin-top: 30px; /* Define a margem superior da seção de filtro */
+      border-top: 1px solid #ccc; /* Adiciona uma borda superior à seção de filtro */
+      padding-top: 20px; /* Define o preenchimento superior da seção de filtro */
+    }
+    ul {
+      padding-left: 20px; /* Define o preenchimento à esquerda da lista não ordenada */
+    }
+  </style>
+</head>
+<body>
+  <h1>I'm a fool, maybe I'm worthless But this world created my faith So all I can do is stay hopeful and pray</h1> <!-- Título principal da página -->
+
+  <label for="titulo">Título:</label> <!-- Rótulo para o campo de entrada do título -->
+  <input type="text" id="titulo"> <!-- Campo de entrada para o título do filme -->
+
+  <label for="ano">Ano:</label> <!-- Rótulo para o campo de entrada do ano -->
+  <input type="number" id="ano"> <!-- Campo de entrada para o ano do filme -->
+
+  <label for="classificacao">Classificação:</label> <!-- Rótulo para o campo de seleção da classificação -->
+  <select id="classificacao"> <!-- Campo de seleção para a classificação do filme -->
+    <option value="Livre">Livre</option> <!-- Opção de classificação livre -->
+    <option value="10">10</option> <!-- Opção de classificação 10 -->
+    <option value="12">12</option> <!-- Opção de classificação 12 -->
+    <option value="14">14</option> <!-- Opção de classificação 14 -->
+    <option value="16">16</option> <!-- Opção de classificação 16 -->
+    <option value="18">18</option> <!-- Opção de classificação 18 -->
+  </select>
+
+  <button onclick="cadastrarFilme()">Cadastrar Filme</button> <!-- Botão para cadastrar o filme, chama a função cadastrarFilme() -->
+
+  <h2>Filmes Cadastrados:</h2> <!-- Título da seção de filmes cadastrados -->
+  <ul id="listaFilmes"></ul> <!-- Lista não ordenada para exibir os filmes cadastrados -->
+
+  <div class="filtro"> <!-- Divisão para a seção de filtros -->
+    <h3>Filtrar por Classificação:</h3> <!-- Título da seção de filtro por classificação -->
+    <select id="filtroClassificacao" onchange="filtrarPorClassificacao()"> <!-- Campo de seleção para filtrar por classificação -->
+      <option value="">-- Selecione --</option> <!-- Opção padrão para seleção -->
+      <option value="Livre">Livre</option> <!-- Opção de filtro livre -->
+      <option value="10">10</option> <!-- Opção de filtro 10 -->
+      <option value="12">12</option> <!-- Opção de filtro 12 -->
+      <option value="14">14</option> <!-- Opção de filtro 14 -->
+      <option value="16">16</option> <!-- Opção de filtro 16 -->
+      <option value="18">18</option> <!-- Opção de filtro 18 -->
+    </select>
+
+    <h3>Filtrar por Ano:</h3> <!-- Título da seção de filtro por ano -->
+    <input type="number" id="filtroAno" oninput="filtrarPorAno()"> <!-- Campo de entrada para filtrar por ano -->
+  </div>
+</body>
+</html>

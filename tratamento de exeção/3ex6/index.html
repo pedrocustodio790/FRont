@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Usuário</title>
+  <script src="script.js"></script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #0a0a1a; /* Fundo azul marinho escuro */
+      color: #e0e0e0;
+    }
+
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      margin-bottom: 20px;
+      background-color: #1a1a2e;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    input {
+      display: block;
+      margin: 15px 0;
+      padding: 12px;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #2a2a3a;
+      border: 1px solid #3a3a4a;
+      color: #ffffff;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input::placeholder {
+      color: #b0b0b0;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .sea-image {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Usuário</h1>
+    
+    <img src="1745945234189.jpg" alt="I will just be a black sea" class="sea-image">
+
+    <form id="formUsuario">
+      <input type="text" id="nome" placeholder="Nome" required />
+      <input type="text" id="cpf" placeholder="CPF (somente números)" required />
+      <input type="email" id="email" placeholder="E-mail" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>

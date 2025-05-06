@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <script src="contato.js" defer></script>
+    <script src="agendacontato.js" defer ></script>
+    <script src="main.js" defer ></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .header-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header-image img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Adicionando a imagem no cabeçalho -->
+        <div class="header-image">
+            <img src="1745945184461.jpg" alt="Motivated CHAN 132">
+        </div>
+        
+        <h1>Agenda de Contatos</h1>
+        
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite o nome">
+        </div>
+        
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" placeholder="Digite o telefone (ex: 11987654321)">
+            <div id="erro-telefone" class="erro"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite o e-mail">
+            <div id="erro-email" class="erro"></div>
+        </div>
+        
+        <button id="btn-adicionar">Adicionar Contato</button>
+        <button id="btn-atualizar" style="display: none; background-color: #2196F3;">Atualizar Contato</button>
+        <button id="btn-cancelar" style="display: none; background-color: #f44336;">Cancelar</button>
+        
+        <div id="mensagem" class="sucesso"></div>
+        
+        <div class="grupo-pesquisa">
+            <input type="text" id="pesquisa" placeholder="Pesquisar contato por nome">
+            <button id="btn-pesquisar">Pesquisar</button>
+            <button id="btn-limpar-pesquisa">Limpar</button>
+        </div>
+        
+        <button id="btn-ordenar">Ordenar por Nome</button>
+        
+        <table id="tabela-contatos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="lista-contatos">
+                <!-- Contatos serão adicionados aqui -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
