@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Transformar Texto com Callback</title> <!-- Título da página -->
+  <script src="script.js" defer ></script> <!-- Inclui o arquivo JavaScript com carregamento assíncrono -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+    }
+    input, button {
+      padding: 8px; /* Adiciona espaçamento interno aos campos de entrada e botões */
+      margin-top: 10px; /* Adiciona margem superior aos campos de entrada e botões */
+      width: 100%; /* Define a largura dos campos de entrada e botões como 100% */
+    }
+    #resultado {
+      margin-top: 20px; /* Adiciona margem superior ao resultado */
+      font-weight: bold; /* Define o texto do resultado como negrito */
+    }
+  </style>
+</head>
+<body>
+  <h1>Transformar Texto</h1> <!-- Cabeçalho principal da página -->
+
+  <label for="texto">Digite um texto:</label> <!-- Rótulo para o campo de entrada de texto -->
+  <input type="text" id="texto" placeholder="Ex: Guilty Gear Strive"> <!-- Campo de entrada para o texto -->
+
+  <label for="transformacao">Escolha a transformação:</label> <!-- Rótulo para o menu de transformação -->
+  <select id="transformacao"> <!-- Menu suspenso para selecionar a transformação -->
+    <option value="maiuscula">Maiúsculas</option> <!-- Opção para transformar em maiúsculas -->
+    <option value="minuscula">Minúsculas</option> <!-- Opção para transformar em minúsculas -->
+    <option value="inverter">Inverter</option> <!-- Opção para inverter o texto -->
+  </select>
+
+  <button onclick="aplicarTransformacao()">Transformar</button> <!-- Botão para aplicar a transformação -->
+  
+  <div id="resultado"></div> <!-- Div para exibir o resultado da transformação -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Aplicar Operação com Callback</title> <!-- Título da página -->
+  <script src="script.js" defer></script> <!-- Inclui o arquivo JavaScript com carregamento deferido -->
+  <style>
+    /* Estilo do corpo da página */ 
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { margin-top: 10px; padding: 10px; width: 100%; } /* Estilo para inputs e botões */
+    #resultado { margin-top: 20px; font-weight: bold; } /* Estilo para o resultado */
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Quadrado (com Callback)</h1> <!-- Cabeçalho da página -->
+
+  <label for="numero">Digite um número:</label> <!-- Rótulo para o campo de entrada -->
+  <input type="number" id="numero"> <!-- Campo de entrada para número -->
+
+  <button onclick="executar()">Calcular Quadrado</button> <!-- Botão que chama a função executar -->
+
+  <p id="resultado"></p> <!-- Parágrafo para exibir o resultado -->
+</body>
+</html>

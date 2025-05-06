@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Calculadora de Imposto</title> <!-- Título da página -->
+  <script src="script.js" defer></script> <!-- Inclui o arquivo JavaScript com carregamento assíncrono -->
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; } /* Estilo do corpo da página */
+    input, button { margin-top: 10px; padding: 10px; width: 100%; } /* Estilo para inputs e botões */
+    #resultado { margin-top: 20px; font-weight: bold; } /* Estilo para o resultado */
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Imposto</h1> <!-- Cabeçalho principal -->
+
+  <label for="valor">Valor da compra (R$):</label> <!-- Rótulo para o campo de valor -->
+  <input type="number" id="valor" step="0.01"> <!-- Campo de entrada para o valor da compra -->
+
+  <label for="porcentagem">Porcentagem de imposto (%):</label> <!-- Rótulo para o campo de porcentagem -->
+  <input type="number" id="porcentagem" step="0.01"> <!-- Campo de entrada para a porcentagem de imposto -->
+
+  <button onclick="calcular()">Calcular Total</button> <!-- Botão que chama a função calcular() -->
+
+  <p id="resultado"></p> <!-- Parágrafo para exibir o resultado -->
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva -->
+    <script src="ex5.js" defer></script> <!-- Importa o script externo ex5.js com defer -->
+    <title>Manipulação de Frases</title> <!-- Título da página -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte da página */
+            max-width: 600px; /* Define a largura máxima do conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            padding: 20px; /* Adiciona espaçamento interno */
+        }
+        h1 {
+            color: #2c3e50; /* Define a cor do título */
+            text-align: center; /* Centraliza o título */
+        }
+        .container {
+            background-color: #f8f9fa; /* Define a cor de fundo do container */
+            padding: 20px; /* Adiciona espaçamento interno ao container */
+            border-radius: 8px; /* Adiciona bordas arredondadas ao container */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adiciona sombra ao container */
+        }
+        label {
+            display: block; /* Exibe o rótulo como bloco */
+            margin-bottom: 8px; /* Adiciona espaçamento abaixo do rótulo */
+            font-weight: bold; /* Define o texto do rótulo como negrito */
+        }
+        input[type="text"] {
+            width: 100%; /* Define a largura do campo de entrada como 100% */
+            padding: 10px; /* Adiciona espaçamento interno ao campo de entrada */
+            margin-bottom: 15px; /* Adiciona espaçamento abaixo do campo de entrada */
+            border: 1px solid #ddd; /* Adiciona uma borda ao campo de entrada */
+            border-radius: 4px; /* Adiciona bordas arredondadas ao campo de entrada */
+            box-sizing: border-box; /* Inclui padding e border no tamanho total do campo */
+        }
+        button {
+            background-color: #3498db; /* Define a cor de fundo do botão */
+            color: white; /* Define a cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            padding: 10px 15px; /* Adiciona espaçamento interno ao botão */
+            border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
+            cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+            font-size: 16px; /* Define o tamanho da fonte do botão */
+        }
+        button:hover {
+            background-color: #2980b9; /* Altera a cor de fundo do botão ao passar o mouse */
+        }
+        .resultado {
+            margin-top: 20px; /* Adiciona espaçamento acima do resultado */
+            padding: 15px; /* Adiciona espaçamento interno ao resultado */
+            background-color: #e8f4f8; /* Define a cor de fundo do resultado */
+            border-radius: 4px; /* Adiciona bordas arredondadas ao resultado */
+            border-left: 4px solid #3498db; /* Adiciona uma borda à esquerda do resultado */
+        }
+        .resultado p {
+            margin: 5px 0; /* Adiciona espaçamento vertical entre os parágrafos */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Container principal da página -->
+        <h1>Manipulação de Frases</h1> <!-- Título principal da página -->
+        
+        <label for="frase">Digite uma frase:</label> <!-- Rótulo para o campo de entrada -->
+        <input type="text" id="frase" placeholder="Digite sua frase aqui..."> <!-- Campo de entrada para a frase -->
+        
+        <button onclick="processarFrase()">Processar Frase</button> <!-- Botão para processar a frase -->
+        
+        <div id="resultado" class="resultado" style="display: none;"> <!-- Div para exibir os resultados -->
+            <p><strong>Frase em maiúsculas:</strong> <span id="maiusculas"></span></p> <!-- Resultado em maiúsculas -->
+            <p><strong>Frase em minúsculas:</strong> <span id="minusculas"></span></p> <!-- Resultado em minúsculas -->
+            <p><strong>Tamanho da frase:</strong> <span id="tamanho"></span> caracteres</p> <!-- Tamanho da frase -->
+        </div>
+    </div>
+</body>
+</html>s

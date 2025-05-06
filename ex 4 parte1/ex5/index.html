@@ -1,0 +1,34 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Contar Vogais</title> <!-- Título da página exibido na aba do navegador -->
+  <script src="script.js" defer></script> <!-- Inclui o arquivo JavaScript com carregamento deferido -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte do corpo da página */
+      padding: 20px; /* Adiciona espaçamento interno ao corpo */
+    }
+    input, button {
+      padding: 10px; /* Adiciona espaçamento interno aos elementos de entrada e botão */
+      margin-top: 10px; /* Adiciona margem superior aos elementos de entrada e botão */
+      width: 100%; /* Define a largura dos elementos como 100% do contêiner pai */
+    }
+    #resultado {
+      margin-top: 20px; /* Adiciona margem superior ao elemento de resultado */
+      font-weight: bold; /* Define o texto do resultado como negrito */
+    }
+  </style>
+</head>
+<body>
+  <h1>Contador de Vogais</h1> <!-- Título principal da página -->
+
+  <label for="entrada">Digite um texto:</label> <!-- Rótulo para o campo de entrada -->
+  <input type="text" id="entrada" placeholder="Ex: computador"> <!-- Campo de entrada para o texto -->
+
+  <button onclick="mostrarResultado()">Contar Vogais</button> <!-- Botão que chama a função mostrarResultado ao ser clicado -->
+
+  <div id="resultado"></div> <!-- Div onde o resultado será exibido -->
+
+</body> <!-- Fim do corpo da página -->
+</html> <!-- Fim do documento HTML -->

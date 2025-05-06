@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+    <script src="ex7.js" defer></script> <!-- Inclui o arquivo JavaScript para manipular a lógica -->
+    <title>Calculadora de Desconto</title> <!-- Título da página exibido na aba do navegador -->
+    <style>
+        /* Estilo geral do corpo */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte do corpo */
+            max-width: 500px; /* Limita a largura máxima do corpo */
+            margin: 0 auto; /* Centraliza o corpo na página */
+            padding: 20px; /* Adiciona espaçamento interno */
+            text-align: center; /* Centraliza o texto */
+        }
+        /* Estilo para os elementos de seleção */
+        .seletor {
+            margin: 20px 0; /* Adiciona margem vertical aos seletores */
+        }
+        /* Estilo para os campos de seleção e entrada */
+        select, input {
+            padding: 10px; /* Adiciona espaçamento interno aos campos */
+            font-size: 16px; /* Define o tamanho da fonte */
+            width: 200px; /* Define a largura dos campos */
+            border-radius: 5px; /* Arredonda os cantos dos campos */
+            border: 1px solid #ccc; /* Define a borda dos campos */
+            margin: 5px 0; /* Adiciona margem vertical aos campos */
+        }
+        /* Estilo para o botão */
+        button {
+            padding: 12px 25px; /* Adiciona espaçamento interno ao botão */
+            font-size: 16px; /* Define o tamanho da fonte do botão */
+            background-color: #4CAF50; /* Define a cor de fundo do botão */
+            color: white; /* Define a cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            border-radius: 5px; /* Arredonda os cantos do botão */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+            transition: background-color 0.3s; /* Adiciona transição suave para a cor de fundo */
+            margin-top: 15px; /* Adiciona margem superior ao botão */
+        }
+        /* Efeito hover no botão */
+        button:hover {
+            background-color: #45a049; /* Muda a cor de fundo ao passar o mouse */
+        }
+        /* Estilo para o resultado */
+        #resultado {
+            margin-top: 30px; /* Adiciona margem superior ao resultado */
+            padding: 20px; /* Adiciona espaçamento interno ao resultado */
+            font-size: 18px; /* Define o tamanho da fonte do resultado */
+            border: 1px solid #ddd; /* Define a borda do resultado */
+            border-radius: 5px; /* Arredonda os cantos do resultado */
+            background-color: #f9f9f9; /* Define a cor de fundo do resultado */
+            display: none; /* Inicialmente escondido */
+        }
+        /* Estilo para o preço original */
+        .preco-original {
+            text-decoration: line-through; /* Adiciona linha sobre o preço original */
+            color: #777; /* Define a cor do preço original */
+        }
+        /* Estilo para o preço com desconto */
+        .preco-desconto {
+            color: #e74c3c; /* Define a cor do preço com desconto */
+            font-weight: bold; /* Define o peso da fonte como negrito */
+            font-size: 24px; /* Define o tamanho da fonte do preço com desconto */
+        }
+        /* Estilo para a economia */
+        .economia {
+            color: #2ecc71; /* Define a cor da economia */
+            font-weight: bold; /* Define o peso da fonte como negrito */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Desconto</h1> <!-- Título principal da página -->
+    
+    <!-- Seletor para escolher o produto -->
+    <div class="seletor">
+        <label for="produto">Selecione o produto:</label><br> <!-- Rótulo para o seletor de produtos -->
+        <select id="produto"> <!-- Campo de seleção para produtos -->
+            <option value="" disabled selected>Escolha um produto</option> <!-- Placeholder inicial -->
+            <option value="100">Produto 1 - R$ 100,00</option> <!-- Opção de produto 1 -->
+            <option value="180">Produto 2 - R$ 180,00</option> <!-- Opção de produto 2 -->
+            <option value="220">Produto 3 - R$ 220,00</option> <!-- Opção de produto 3 -->
+        </select>
+    </div>
+    
+    <!-- Seletor para escolher o desconto -->
+    <div class="seletor">
+        <label for="desconto">Selecione o desconto:</label><br> <!-- Rótulo para o seletor de descontos -->
+        <select id="desconto"> <!-- Campo de seleção para descontos -->
+            <option value="" disabled selected>Escolha um desconto</option> <!-- Placeholder inicial -->
+            <option value="10">10% de desconto</option> <!-- Opção de desconto de 10% -->
+            <option value="15">15% de desconto</option> <!-- Opção de desconto de 15% -->
+            <option value="25">25% de desconto</option> <!-- Opção de desconto de 25% -->
+        </select>
+    </div>
+    
+    <!-- Botão para calcular o desconto -->
+    <button onclick="calcularDesconto()">Calcular Desconto</button> <!-- Botão que chama a função de cálculo -->
+    
+    <!-- Div onde o resultado será exibido -->
+    <div id="resultado"></div> <!-- Div para exibir o resultado do cálculo -->
+</body>
+</html>

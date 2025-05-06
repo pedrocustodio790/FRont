@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização para dispositivos móveis -->
+    <script src="ex1.js" defer></script> <!-- Inclui o arquivo JavaScript 'ex1.js' com carregamento adiado -->
+    <title>Antecessor e Sucessor</title> <!-- Título da página exibido na aba do navegador -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;  /* Define a fonte do corpo da página */
+            max-width: 500px; /* Define a largura máxima do corpo */
+            margin: 0 auto; /* Centraliza o corpo da página */
+            padding: 20px; /* Adiciona espaçamento interno ao corpo */
+            text-align: center; /* Centraliza o texto dentro do corpo */
+        }
+        input, button {
+            padding: 8px; /* Adiciona espaçamento interno aos elementos de entrada e botão */
+            margin: 10px 0; /* Adiciona espaçamento externo vertical entre os elementos */
+            font-size: 16px; /* Define o tamanho da fonte para os elementos de entrada e botão */
+        }
+        #resultado {
+            margin-top: 20px; /* Adiciona espaçamento acima do elemento de resultado */
+            font-size: 18px; /* Define o tamanho da fonte para o resultado */
+            font-weight: bold; /* Define o peso da fonte como negrito para o resultado */
+        }
+    </style>
+</head>
+<body>
+    <h1>Antecessor e Sucessor</h1> <!-- Título principal da página -->
+    <p>Digite um número inteiro:</p> <!-- Instrução para o usuário -->
+
+    <input type="number" id="numeroInput" placeholder="Digite um número"> <!-- Campo de entrada para o número inteiro -->
+    <button onclick="calcular()">Calcular</button> <!-- Botão que chama a função 'calcular' quando clicado -->
+
+    <div id="resultado"></div> <!-- Divisão onde o resultado será exibido -->
+</body>
+</html>

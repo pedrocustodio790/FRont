@@ -1,0 +1,40 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva -->
+    <script src="ex3.js" defer></script> <!-- Importa o script externo ex3.js com defer -->
+    <title>Conversor de Temperatura</title> <!-- Título da página -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte da página */
+            max-width: 500px; /* Define a largura máxima do conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            padding: 20px; /* Adiciona espaçamento interno */
+            text-align: center; /* Centraliza o texto */
+        }
+        #resultado {
+            margin-top: 20px; /* Adiciona espaçamento acima do resultado */
+            font-size: 18px; /* Define o tamanho da fonte do resultado */
+            font-weight: bold; /* Define o texto como negrito */
+            padding: 15px; /* Adiciona espaçamento interno ao resultado */
+            border: 1px solid #ddd; /* Adiciona uma borda ao resultado */
+            border-radius: 5px; /* Adiciona bordas arredondadas ao resultado */
+            background-color: #f9f9f9; /* Define a cor de fundo do resultado */
+        }
+        .temp {
+            margin: 10px 0; /* Adiciona espaçamento vertical entre os elementos */
+            padding: 8px; /* Adiciona espaçamento interno */
+            border-bottom: 1px solid #eee; /* Adiciona uma borda inferior leve */
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1> <!-- Cabeçalho principal da página -->
+    <p>Este programa converte Celsius para Fahrenheit e Kelvin</p> <!-- Descrição do programa -->
+    
+    <div id="resultado">
+        As conversões aparecerão aqui... <!-- Área onde os resultados serão exibidos -->
+    </div>
+</body>
+</html>
