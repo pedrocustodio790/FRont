@@ -1,25 +1,33 @@
-function configurar() {
-    let verificarsenha = document.getElementById("verificar");
-    verificarsenha.addEventListener('click', checarsenha); 
-}
-
-function checarsenha() { 
-    let inputsenha = document.getElementById("senhaforte");
-    let saida = document.getElementById("saida");
+function setupPasswordValidator() {
+    const passwordInput = document.getElementById("senhaforte");
+    const submitButton = document.getElementById("verificar");
+    const output = document.getElementById("saida");
     
-    if(inputsenha) {
-        let senhaforte = inputsenha.value;
-        let senharegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
-        let senhavalida = senharegex.test(senhaforte);
+    submitButton.addEventListener('click', validatePassword);
+    
+    function validatePassword() { 
+        const password = passwordInput.value.trim();
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
+        const isValid = passwordRegex.test(password);
         
-        if(senhavalida) {
-            saida.textContent = "Senha válida!";
-            saida.style.color = "green";
-        } else {
-            saida.textContent = "Senha inválida! Deve ter: 8-16 caracteres, 1 maiúscula, 1 minúscula, 1 número e 1 caractere especial (@$!%*?&)";
-            saida.style.color = "red";
+        output.textContent = isValid 
+            ? "Senha válida!" 
+            : "Senha inválida! Requisitos:";
+            
+        output.className = isValid ? "valid" : "invalid";
+        
+        if (!isValid) {
+            const requirements = document.createElement("ul");
+            requirements.innerHTML = `
+                <li>8-16 caracteres</li>
+                <li>1 letra maiúscula</li>
+                <li>1 letra minúscula</li>
+                <li>1 número</li>
+                <li>1 caractere especial (@$!%*?&)</li>
+            `;
+            output.appendChild(requirements);
         }
     }
 }
 
-document.addEventListener('DOMContentLoaded', configurar);
+document.addEventListener('DOMContentLoaded', setupPasswordValidator);

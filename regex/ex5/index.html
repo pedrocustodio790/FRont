@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Validator</title>
-  <script src="script.js"></script>
+  <title>Validação de E-mail</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -16,7 +15,7 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      background-image: url('51dnNQnx6LL._UF1000,1000_QL80_.jpg');
+      background-image: url('Hail-to-the-king-capa.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -131,35 +130,21 @@
       color: #ff8a80;
       border: 1px solid #ff8a80;
     }
-    #saida ul {
-      margin: 10px 0 0 20px;
-      padding: 0;
-      text-align: left;
-    }
-    
-    #saida li {
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
   </style>
 </head>
 <body>
   <div class="main-content">
     <div class="container">
-      <h2>Morose and old<br>
-        Drop into fruitless dying<br>
-        It was tempting and bared<br>
-        The whoring angel rising<br>
-        Now burning prayers</h2>
+      <h2>No home to call my own <br> No finding someone new <br> No one to break the fall <br> No one to see me through <br> No name to carry on <br> No promise for today <br> No one to hear the call <br> <br> No tattered flag to raise</h2>
 
-      <label for="senhaforte">Cadastre uma senha</label>
-      <input type="password" id="senhaforte" placeholder="We2874@pyu">
-      <button id="verificar">Cadastrar</button>
+      <label for="email">Digite seu e-mail:</label>
+      <input type="text" id="email" placeholder="exemplo@gmail.com">
+      <button onclick="validarEmail()">Validar</button>
       <p id="saida"></p>
     </div>
 
     <div class="image-side">
-      <img src="51dnNQnx6LL._UF1000,1000_QL80_.jpg" alt="THE GREAT SOUTHERN TRENDKILL">
+      <img src="Hail-to-the-king-capa.jpg" alt="Hail to the King">
     </div>
   </div>
 
